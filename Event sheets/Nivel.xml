@@ -1007,6 +1007,10 @@
                                 <action id="-2" name="Go to layout" sid="604764266051388" type="System">
                                     <param id="0" name="Layout">Menu</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="208364087968038" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="817618775803871">
