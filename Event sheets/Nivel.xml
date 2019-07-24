@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Nivel</name>
+    <events>
+        <variable constant="0" name="level" sid="799340816221556" static="0" type="number">1</variable>
+        <variable constant="0" name="controleAtivos" sid="261642454474046" static="0" type="text">false</variable>
+        <variable constant="0" name="movimentoCompleto" sid="446911832249717" static="0" type="text">false</variable>
+        <variable constant="0" name="direita" sid="617121110180437" static="0" type="number">0</variable>
+        <variable constant="0" name="baixo" sid="780408708270037" static="0" type="number">90</variable>
+        <variable constant="0" name="esquerda" sid="615982847496869" static="0" type="number">180</variable>
+        <variable constant="0" name="cima" sid="839762507491356" static="0" type="number">270</variable>
+        <variable constant="0" name="GridSize" sid="915393790903416" static="0" type="number">16</variable>
+        <event-block sid="548147194830243">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="708867902099272" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="373859223179215" type="Som">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="146112901032066" type="Box">
+                    <param id="0" name="Object">Caixa</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="952089595215642" type="Box">
+                    <param id="0" name="Pin to">Caixa</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="990571859828648" type="System">
+                    <param id="0" name="Variable">controleAtivos</param>
+                    <param id="1" name="Value">&quot;true&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="107808058481179">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="806782278749851" type="System">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Expression">0</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="783689291990361" type="System">
+                            <param id="0" name="Object to create">PlayerSprite</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="582978447730160" type="Player">
+                            <param id="0" name="Instance variable">spriteId</param>
+                            <param id="1" name="Value">PlayerSprite.UID</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="772633541335571" type="PlayerSprite">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="472691513285291" type="PlayerSprite">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="817191521915907" title="Movimento">
+            <sub-events>
+                <event-block sid="554365795648987">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="192085699737797" type="System">
+                            <param id="0" name="Variable">controleAtivos</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="935672670720123">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="765330897065633" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="539785217919416" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;isTouching&quot;, &quot;right&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="146175137108651">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="872576906950929" type="System">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.player</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="386460868795474">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="355320059397149" type="Player">
+                                                    <param id="0" name="Instance variable">Ativo</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="522757680966642" type="Player">
+                                                    <param id="0" name="Instance variable">direcao</param>
+                                                    <param id="1" name="Value">direita</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="832714650668508" type="Function">
+                                                    <param id="0" name="Name">&quot;verificarColisao&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}GridSize{###}0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="106459647357501">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="612627982594596" type="System">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.player</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="188639008262768">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="365154092401784" type="Player">
+                                                    <param id="0" name="Instance variable">Ativo</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="309198187566052" type="System">
+                                                    <param id="0" name="Variable">movimentoCompleto</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="189624514057100" type="Player">
+                                                    <param id="0" name="Instance variable">direcao</param>
+                                                    <param id="1" name="Value">esquerda</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="770821091821846" type="Function">
+                                                    <param id="0" name="Name">&quot;verificarColisao&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}-GridSize{###}0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="690322324045961">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="110064070720580" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="495601807223342" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;isTouching&quot;, &quot;down&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="648304875709371">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="532227771195356" type="System">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.player</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="237933646055977">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="179898912549947" type="Player">
+                                                    <param id="0" name="Instance variable">Ativo</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="631223621372549" type="Player">
+                                                    <param id="0" name="Instance variable">direcao</param>
+                                                    <param id="1" name="Value">baixo</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="824450248097138" type="Function">
+                                                    <param id="0" name="Name">&quot;verificarColisao&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}0{###}GridSize</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="178752025281941">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="971591021810588" type="System">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.player</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="858841261098101">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="639998818707058" type="Player">
+                                                    <param id="0" name="Instance variable">Ativo</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="355271548104646" type="System">
+                                                    <param id="0" name="Variable">movimentoCompleto</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="585179463998325" type="Player">
+                                                    <param id="0" name="Instance variable">direcao</param>
+                                                    <param id="1" name="Value">cima</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="875151478220808" type="Function">
+                                                    <param id="0" name="Name">&quot;verificarColisao&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}0{###}-GridSize</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="342895544906635">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="561863432548946" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="232206732453532" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;isTouching&quot;, &quot;left&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="863130668733227">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="349772628115160" type="System">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.player</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="567519449673451">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="612729073278531" type="Player">
+                                                    <param id="0" name="Instance variable">Ativo</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="977092477124610" type="Player">
+                                                    <param id="0" name="Instance variable">direcao</param>
+                                                    <param id="1" name="Value">esquerda</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="724319851839605" type="Function">
+                                                    <param id="0" name="Name">&quot;verificarColisao&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}-GridSize{###}0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="574835873466107">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="333617009318436" type="System">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.player</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="899459112901755">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="146045076979908" type="Player">
+                                                    <param id="0" name="Instance variable">Ativo</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="381042291107059" type="System">
+                                                    <param id="0" name="Variable">movimentoCompleto</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="837671652446462" type="Player">
+                                                    <param id="0" name="Instance variable">direcao</param>
+                                                    <param id="1" name="Value">direita</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="843622440002485" type="Function">
+                                                    <param id="0" name="Name">&quot;verificarColisao&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}GridSize{###}0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="753870179854800">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="304187975640250" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="678836599787744" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;isTouching&quot;, &quot;up&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="134297411901854">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="706825886454126" type="System">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.player</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="712532633111822">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="783347966985487" type="Player">
+                                                    <param id="0" name="Instance variable">Ativo</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="680781178953503" type="Player">
+                                                    <param id="0" name="Instance variable">direcao</param>
+                                                    <param id="1" name="Value">cima</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="685196840656090" type="Function">
+                                                    <param id="0" name="Name">&quot;verificarColisao&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}0{###}-GridSize</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="602792804287052">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="761670171820319" type="System">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Expression">Player.player</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="896307570438946">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="560991367204076" type="Player">
+                                                    <param id="0" name="Instance variable">Ativo</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="888846402941832" type="System">
+                                                    <param id="0" name="Variable">movimentoCompleto</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="162153593142569" type="Player">
+                                                    <param id="0" name="Instance variable">direcao</param>
+                                                    <param id="1" name="Value">baixo</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="456481349609768" type="Function">
+                                                    <param id="0" name="Name">&quot;verificarColisao&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}0{###}GridSize</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="620367412669477">
+                    <conditions>
+                        <condition id="0" name="On function" sid="667600643827121" type="Function">
+                            <param id="0" name="Name">&quot;isTouching&quot;</param>
+                        </condition>
+                        <condition id="7" name="Compare touch speed" sid="261827093860506" type="Touch">
+                            <param id="0" name="Touch index">0</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Speed">1000</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="144442570040426">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="214323930805477" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="183151853692987" type="System">
+                                    <param id="0" name="Value">Touch.AngleAt(0)</param>
+                                    <param id="1" name="Lower bound">-25</param>
+                                    <param id="2" name="Upper bound">25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="737944979272312" type="Function">
+                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="279524923646340">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="129889828826349" type="System" />
+                                <condition id="1" name="Compare parameter" sid="243034705963259" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="749664296189759">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="193356405046737" type="System">
+                                            <param id="0" name="Value">Touch.AngleAt(0)</param>
+                                            <param id="1" name="Lower bound">-180</param>
+                                            <param id="2" name="Upper bound">-155</param>
+                                        </condition>
+                                        <condition id="-21" name="Is between values" sid="520754012536967" type="System">
+                                            <param id="0" name="Value">Touch.AngleAt(0)</param>
+                                            <param id="1" name="Lower bound">155</param>
+                                            <param id="2" name="Upper bound">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="687852190242791" type="Function">
+                                            <param id="0" name="Value">&quot;true&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="790729664718685">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="583388294137709" type="System" />
+                                <condition id="1" name="Compare parameter" sid="943154688661212" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="434915811229569" type="System">
+                                    <param id="0" name="Value">Touch.AngleAt(0)</param>
+                                    <param id="1" name="Lower bound">65</param>
+                                    <param id="2" name="Upper bound">115</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="498546447749887" type="Function">
+                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="765449918835410">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="753653275864577" type="System" />
+                                <condition id="1" name="Compare parameter" sid="619978579742522" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                </condition>
+                                <condition id="-21" name="Is between values" sid="630732527319208" type="System">
+                                    <param id="0" name="Value">Touch.AngleAt(0)</param>
+                                    <param id="1" name="Lower bound">-155</param>
+                                    <param id="2" name="Upper bound">-65</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="996803957231526" type="Function">
+                                    <param id="0" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="775046739998669">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="864945598450987" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="282855924389502" type="Function">
+                                    <param id="0" name="Value">&quot;false&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="545165863163300" title="Mecanicas">
+            <sub-events>
+                <event-block sid="213158962157137">
+                    <conditions>
+                        <condition id="0" name="On function" sid="903261168796798" type="Function">
+                            <param id="0" name="Name">&quot;verificarColisao&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="897271579381960" type="Player">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="284454932295247" type="System">
+                            <param id="0" name="Variable">movimentoCompleto</param>
+                            <param id="1" name="Value">&quot;false&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="728979209819347">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="826280894826688" type="Player">
+                                    <param id="0" name="Object">Porta</param>
+                                    <param id="1" name="Offset X">Function.Param(1)</param>
+                                    <param id="2" name="Offset Y">Function.Param(2)</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="591746398863577" type="Caixa">
+                                    <param id="0" name="Object">Ativador</param>
+                                </condition>
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="400171701631876" type="Player">
+                                    <param id="0" name="Object">Parede</param>
+                                    <param id="1" name="Offset X">Function.Param(1)</param>
+                                    <param id="2" name="Offset Y">Function.Param(2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="941691723617466" type="Function">
+                                    <param id="0" name="Name">&quot;movimentar&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="417954520781830">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="513981421994814" type="System" />
+                                <condition id="9" name="Is overlapping at offset" sid="383133348370272" type="Player">
+                                    <param id="0" name="Object">Caixa</param>
+                                    <param id="1" name="Offset X">Function.Param(1)</param>
+                                    <param id="2" name="Offset Y">Function.Param(2)</param>
+                                </condition>
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="136255939310889" type="Caixa">
+                                    <param id="0" name="Object">Parede</param>
+                                    <param id="1" name="Offset X">Function.Param(1)</param>
+                                    <param id="2" name="Offset Y">Function.Param(2)</param>
+                                </condition>
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="695003681187680" type="Player">
+                                    <param id="0" name="Object">Porta</param>
+                                    <param id="1" name="Offset X">Function.Param(1)</param>
+                                    <param id="2" name="Offset Y">Function.Param(2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="642917972783583" type="Function">
+                                    <param id="0" name="Name">&quot;movimentar&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="497316921691278" type="Function">
+                                    <param id="0" name="Name">&quot;movimentarCaixa&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="969914574991734">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="539232624205788" type="System" />
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="968538370149660" type="Player">
+                                    <param id="0" name="Object">Parede</param>
+                                    <param id="1" name="Offset X">Function.Param(1)</param>
+                                    <param id="2" name="Offset Y">Function.Param(2)</param>
+                                </condition>
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="526748024155990" type="Player">
+                                    <param id="0" name="Object">Caixa</param>
+                                    <param id="1" name="Offset X">Function.Param(1)</param>
+                                    <param id="2" name="Offset Y">Function.Param(2)</param>
+                                </condition>
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="954256186144311" type="Player">
+                                    <param id="0" name="Object">Porta</param>
+                                    <param id="1" name="Offset X">Function.Param(1)</param>
+                                    <param id="2" name="Offset Y">Function.Param(2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="179386582848320" type="Function">
+                                    <param id="0" name="Name">&quot;movimentar&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="325211825254645">
+                    <conditions>
+                        <condition id="0" name="On function" sid="538299610960125" type="Function">
+                            <param id="0" name="Name">&quot;movimentar&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="314325904231915" type="Player">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="570052725960507">
+                            <conditions>
+                                <condition behavior="Bullet" id="0" name="Compare speed" sid="445514834305592" type="Player">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="443229660734728" type="System">
+                                    <param id="0" name="Variable">movimentoCompleto</param>
+                                    <param id="1" name="Value">&quot;true&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="585963674320378" type="Function">
+                                    <param id="0" name="Name">&quot;movimentarSprite&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;caminhando&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="126569807226476" type="Player">
+                                    <param id="0" name="Instance variable">Ativo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="434073952331410" type="Player">
+                                    <param id="0" name="Speed">GridSize*2 / Player.TempoMovimento</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="930744912480411" type="Player">
+                                    <param id="0" name="Angle">Player.direcao</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="562324271538073" type="Player">
+                                    <param id="0" name="Duration">Player.TempoMovimento</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;movimentar&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="318907438898424" type="System">
+                                    <param id="0" name="Seconds">Player.TempoMovimento</param>
+                                </action>
+                                <action id="0" name="Call function" sid="531369277280814" type="Function">
+                                    <param id="0" name="Name">&quot;movimentarSprite&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;parado&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="564150674970664">
+                    <conditions>
+                        <condition id="0" name="On function" sid="422327216243241" type="Function">
+                            <param id="0" name="Name">&quot;movimentarSprite&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="867612441033996" type="Player">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="879486768319046" type="PlayerSprite">
+                            <param id="0" name="Unique ID">Player.spriteId</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="158386394890114">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="185866662018222" type="Player">
+                                    <param id="0" name="Instance variable">direcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">direita</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="253593914552607">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="122081810065179" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;caminhando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="435405407783877" type="PlayerSprite">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="149168796851752" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;walkx&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="470887097390286">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="914902975460728" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="328035462534012" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;parado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="422361885605886" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;standx&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="910633022633359">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="772128334258170" type="Player">
+                                    <param id="0" name="Instance variable">direcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">baixo</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="834053815913940">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="316635802392589" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;caminhando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="602941982521430" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;walkdown&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="410441763858496">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="933160927927030" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="661360662512967" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;parado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="859602976263888" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;standdown&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="708273952309028">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="307488472955436" type="Player">
+                                    <param id="0" name="Instance variable">direcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">esquerda</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="144365284617927">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="638413176494677" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;caminhando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="642818112712374" type="PlayerSprite">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="168086892082754" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;walkx&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="395893267751598">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="417952905546678" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="116068669045048" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;parado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="868897115011941" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;standx&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="582712274683374">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="711953998256594" type="Player">
+                                    <param id="0" name="Instance variable">direcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">cima</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="790500588329060">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="551704003097087" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;caminhando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="803664790108272" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;walkup&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="193571675215535">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="265462220516163" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="280487411060713" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;parado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="435662408400376" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;standup&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="202897535801644">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="277445439523008" type="Player">
+                            <param id="0" name="Tag">&quot;movimentar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="755663812054078" type="Player">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="397065355725408" type="Player">
+                            <param id="0" name="X">round(Player.X / GridSize) * GridSize</param>
+                            <param id="1" name="Y">round(Player.Y / GridSize) * GridSize</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="167223590264505" type="Player">
+                            <param id="0" name="Instance variable">Ativo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="565821159508348">
+                    <conditions>
+                        <condition id="0" name="On function" sid="394818903829363" type="Function">
+                            <param id="0" name="Name">&quot;movimentarCaixa&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="469936135752529" type="Som">
+                            <param id="0" name="Audio file">caixa</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="497627568099401">
+                            <conditions>
+                                <condition behavior="Bullet" id="0" name="Compare speed" sid="276130334293761" type="Caixa">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="863211938935327" type="Caixa">
+                                    <param id="0" name="Speed">GridSize*2 / Caixa.TempoMovimento</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="179711184151674" type="Caixa">
+                                    <param id="0" name="Angle">Player.direcao</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="611965452884925" type="Caixa">
+                                    <param id="0" name="Duration">Caixa.TempoMovimento</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;movimentar&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="971646851221840">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="923897943482113" type="Caixa">
+                            <param id="0" name="Tag">&quot;movimentar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="214375637875925" type="Caixa">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="570730645169296" type="Caixa">
+                            <param id="0" name="X">round(Caixa.X / GridSize) * GridSize</param>
+                            <param id="1" name="Y">round(Caixa.Y / GridSize) * GridSize</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735367045826640">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="179506107402115" type="Caixa">
+                            <param id="0" name="Object">Ativador</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="753168848122248" type="Som">
+                            <param id="0" name="Audio file">door</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="436804608732718" type="Porta">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="673333233652197" type="Porta2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="838167477564466" type="Porta2">
+                            <param id="0" name="Fade-in time">2</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="563004569881462" type="Porta2" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="707407614453038" title="CondicaoVitoria">
+            <sub-events>
+                <event-block sid="706674967199432">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="214393199345337" type="Player">
+                            <param id="0" name="Object">Destino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="255696693800967" type="System">
+                            <param id="0" name="Variable">controleAtivos</param>
+                            <param id="1" name="Value">&quot;false&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="139600496831904" type="PlayerSprite">
+                            <param id="0" name="Fade-out time">2</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="176686610272216" type="PlayerSprite" />
+                        <action id="-3" name="Set position" sid="403208413953885" type="Vitoria">
+                            <param id="0" name="X">256</param>
+                            <param id="1" name="Y">128</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="696424449637151" type="Vitoria">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="430064315105389" type="Vitoria">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="462971489287377" type="System">
+                            <param id="0" name="Seconds">Player.TempoMovimento*8</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="636330880064376">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="918213378921539" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="604764266051388" type="System">
+                                    <param id="0" name="Layout">Menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="817618775803871">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="866265897166592" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="718656382342805" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Value">level+1</param>
+                                </action>
+                                <action id="-43" name="Go to next/previous layout" sid="961575927078902" type="System">
+                                    <param id="0" name="Which">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="725723844865219" title="HUD">
+            <sub-events>
+                <event-block any="1" sid="985642536718222">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="233321363643812" type="Touch">
+                            <param id="0" name="Object">Reset</param>
+                        </condition>
+                        <condition id="3" name="On key released" sid="887157343037505" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="917787049936607" type="Som" />
+                        <action id="-26" name="Restart layout" sid="379398260739067" type="System" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="149815707692300">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="114681666252969" type="Touch">
+                            <param id="0" name="Object">Menu</param>
+                        </condition>
+                        <condition id="3" name="On key released" sid="600038165435444" type="Keyboard">
+                            <param id="0" name="Key">27</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="480236003031592" type="Som" />
+                        <action id="-2" name="Go to layout" sid="941511069587558" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

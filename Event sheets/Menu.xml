@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <event-block sid="133212101076018">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="189553349943804" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="333257778439673" type="Som">
+                    <param id="0" name="Audio file">intro_jogo</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;intro&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="613585940204407" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="279817165527098" type="PushStart">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="974323585986197">
+            <conditions>
+                <condition id="17" name="On tap object" sid="379363283401411" type="Touch">
+                    <param id="0" name="Object">PushStart</param>
+                </condition>
+                <condition id="3" name="On key released" sid="657544974232592" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="772998232230883" type="System">
+                    <param id="0" name="Layout">Nivel1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
