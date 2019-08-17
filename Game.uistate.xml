@@ -27,7 +27,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Nivel/" />
-        <folder expanded="0" path="object-folder/Menu/" />
+        <folder expanded="1" path="object-folder/Menu/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="layout-folder/Menu/" />
         <folder expanded="1" path="layout-folder/Nivel/" />
@@ -53,5 +53,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Fadein/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/Estrela/" />
+        <folder expanded="1" path="animation-folder/Sprite11/" />
     </folders-expanded>
 </c2uistate>

@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Menu</name>
     <events>
+        <variable constant="0" name="tower_speed" sid="787723865821793" static="0" type="number">15</variable>
+        <variable constant="0" name="bg_speed" sid="428479470678110" static="0" type="number">15</variable>
         <event-block sid="133212101076018">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="189553349943804" type="System" />
@@ -17,9 +19,7 @@
                 <action id="-16" name="Wait" sid="613585940204407" type="System">
                     <param id="0" name="Seconds">2.5</param>
                 </action>
-                <action id="-15" name="Set visible" sid="279817165527098" type="PushStart">
-                    <param id="0" name="Visibility">1</param>
-                </action>
+                <action behavior="FadeIn" id="1" name="Start fade" sid="999772436086831" type="PushStart" />
             </actions>
         </event-block>
         <event-block any="1" sid="974323585986197">
@@ -35,6 +35,51 @@
                 <action id="-2" name="Go to layout" sid="772998232230883" type="System">
                     <param id="0" name="Layout">Nivel1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="540490971379404">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="143385364655855" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="178412309947826" type="BG">
+                    <param id="0" name="X">BG.X - bg_speed * dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="989733280158439">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="347049256469280" type="BG">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-512</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="178076031588353" type="BG">
+                    <param id="0" name="X">512</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="592762904711611">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="154587031632153" type="System" />
+                <condition id="-1" name="Compare X" sid="517100312640525" type="Sprite3">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">460</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="799078714979852" type="Sprite3">
+                    <param id="0" name="X">Sprite3.X - tower_speed * dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="284579881913447">
+            <conditions>
+                <condition behavior="FadeIn" id="0" name="On fade-out finished" sid="704783890593800" type="PushStart" />
+            </conditions>
+            <actions>
+                <action behavior="FadeIn" id="0" name="Restart fade" sid="561725201468361" type="PushStart" />
             </actions>
         </event-block>
     </events>

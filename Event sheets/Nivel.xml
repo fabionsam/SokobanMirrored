@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Nivel</name>
     <events>
+        <variable constant="0" name="contPassos" sid="784216756167904" static="0" type="number">0</variable>
         <variable constant="0" name="level" sid="799340816221556" static="0" type="number">1</variable>
         <variable constant="0" name="controleAtivos" sid="261642454474046" static="0" type="text">false</variable>
         <variable constant="0" name="movimentoCompleto" sid="446911832249717" static="0" type="text">false</variable>
@@ -30,6 +31,10 @@
                 <action id="-9" name="Set value" sid="990571859828648" type="System">
                     <param id="0" name="Variable">controleAtivos</param>
                     <param id="1" name="Value">&quot;true&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="365916896245723" type="System">
+                    <param id="0" name="Variable">contPassos</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
             <sub-events>
@@ -665,6 +670,26 @@
                                     <param id="1" name="Parameter {n}">Player.UID{###}&quot;parado&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="279803788192328">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="713567111244351" type="Player">
+                                            <param id="0" name="Instance variable">player</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="588828494065903" type="System">
+                                            <param id="0" name="Variable">contPassos</param>
+                                            <param id="1" name="Value">contPassos + 1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="890921997693112" type="Passos">
+                                            <param id="0" name="Text">&quot;Passos: &quot; &amp; contPassos</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -980,15 +1005,15 @@
                             <param id="0" name="Fade-out time">2</param>
                         </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="176686610272216" type="PlayerSprite" />
-                        <action id="-3" name="Set position" sid="403208413953885" type="Vitoria">
-                            <param id="0" name="X">256</param>
-                            <param id="1" name="Y">128</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="696424449637151" type="Vitoria">
+                        <action id="-15" name="Set visible" sid="123608685526040" type="Sprite11">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="430064315105389" type="Vitoria">
+                        <action behavior="Sine" id="0" name="Set active" sid="959233088937959" type="Sprite11">
                             <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="392473377457244" type="Function">
+                            <param id="0" name="Name">&quot;ExibirEstrela&quot;</param>
+                            <param id="1" name="Parameter {n}">contPassos</param>
                         </action>
                         <action id="-16" name="Wait" sid="462971489287377" type="System">
                             <param id="0" name="Seconds">Player.TempoMovimento*8</param>
@@ -1065,5 +1090,37 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="132556265373844">
+            <conditions>
+                <condition id="0" name="On function" sid="383318782419316" type="Function">
+                    <param id="0" name="Name">&quot;ExibirEstrela&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="120685556454704">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="467333292942586" type="System">
+                            <param id="0" name="Object">Estrela</param>
+                            <param id="1" name="Expression">0</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="415787257025734" type="Estrela">
+                            <param id="0" name="Instance variable">Passos</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="846124120204202" type="Estrela">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="880431416204837" type="Estrela">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

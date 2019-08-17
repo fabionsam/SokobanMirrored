@@ -8,8 +8,9 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3pwmtcewzrbco</unique-id>
-    <saved-with-version>26900</saved-with-version>
+    <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -360,14 +361,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="TiledBackground3" sid="445430448146881">
+            <object-type name="BG" sid="445430448146881">
                 <plugin id="TiledBg" />
                 <behaviors>
                     <behavior-type name="CustomMovement" sid="557721711410271">
                         <behavior id="custom" />
                     </behavior-type>
                 </behaviors>
-                <texture original-source="E:\Game Design\Puzzle\Projeto\Assets\Tela\Clouds.png" />
+                <texture original-source="C:\Users\fabio.mattos\Desktop\SokobanMirrored-master\Textures\nuvens-bonitas.png" />
             </object-type>
             <object-type name="Sprite2" sid="305257225611520">
                 <plugin id="Sprite" />
@@ -414,7 +415,7 @@
         <object-type name="PushStart" sid="472898225812146">
             <plugin id="Text" />
             <behaviors>
-                <behavior-type name="Fade" sid="538032264624835">
+                <behavior-type name="FadeIn" sid="381586920320133">
                     <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
@@ -440,6 +441,149 @@
         </object-type>
         <object-type name="Som" sid="561886396063162">
             <plugin id="Audio" />
+        </object-type>
+        <object-type name="Sprite4" sid="924889746714277">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="594277143788584" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="302814860356991">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842564271100588" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="713659488019216">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371624869797320" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground3" sid="619097375069392">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\fabio.mattos\Desktop\SokobanMirrored-master\Textures\agua_3.png" />
+        </object-type>
+        <object-type name="Sprite7" sid="726193741446284">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="665422613870411" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\fabio.mattos\Desktop\SokobanMirrored-master\Textures\agua_3.png">
+                        <collision-poly>
+                            <point x="0.363281" y="0.726563" />
+                            <point x="0.636719" y="0.726563" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="274649756180257">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="430868542885257">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="227506827853027" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\fabio.mattos\Desktop\SokobanMirrored-master\Textures\agua_2.png">
+                        <collision-poly>
+                            <point x="0.388672" y="0.777344" />
+                            <point x="0.5" y="0.816406" />
+                            <point x="0.617188" y="0.765625" />
+                            <point x="0.892578" y="0.785156" />
+                            <point x="0.5" y="0.925781" />
+                            <point x="0.107422" y="0.785156" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite9" sid="330027341923003">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="117943010738916">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="157919712953862" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\fabio.mattos\Desktop\SokobanMirrored-master\Textures\agua_1.png">
+                        <collision-poly>
+                            <point x="0.363281" y="0.726563" />
+                            <point x="0.5" y="0.738281" />
+                            <point x="0.869141" y="0.738281" />
+                            <point x="0.5" y="0.863281" />
+                            <point x="0.0859375" y="0.828125" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Passos" sid="402750575857459">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Estrela" sid="765099667890327">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Passos" sid="641248653695167" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="241480868822803">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410584188229502" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\fabio.mattos\Downloads\Estrela.png">
+                        <collision-poly>
+                            <point x="0.26" y="0.270833" />
+                            <point x="0.5" y="0.0104167" />
+                            <point x="0.74" y="0.270833" />
+                            <point x="0.92" y="0.5" />
+                            <point x="0.82" y="0.8125" />
+                            <point x="0.5" y="0.916667" />
+                            <point x="0.18" y="0.8125" />
+                            <point x="0.07" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="539350827460265">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="484760536319767">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="213000368375481" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502825" original-source="C:\Users\fabio.mattos\Downloads\Estrela.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.423729" />
+                            <point x="0.5" y="0.124294" />
+                            <point x="0.895833" y="0.141243" />
+                            <point x="0.9375" y="0.497175" />
+                            <point x="0.933333" y="0.909605" />
+                            <point x="0.5" y="0.954802" />
+                            <point x="0.0458333" y="0.937853" />
+                            <point x="0.00416667" y="0.497175" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Array" sid="884981987378704">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families />
