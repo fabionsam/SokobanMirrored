@@ -558,7 +558,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="941691723617466" type="Function">
                                     <param id="0" name="Name">&quot;movimentar&quot;</param>
-                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;caminhando&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -584,7 +584,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="642917972783583" type="Function">
                                     <param id="0" name="Name">&quot;movimentar&quot;</param>
-                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;empurrando&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="497316921691278" type="Function">
                                     <param id="0" name="Name">&quot;movimentarCaixa&quot;</param>
@@ -614,7 +614,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="179386582848320" type="Function">
                                     <param id="0" name="Name">&quot;movimentar&quot;</param>
-                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}&quot;caminhando&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -645,7 +645,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="585963674320378" type="Function">
                                     <param id="0" name="Name">&quot;movimentarSprite&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;caminhando&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID{###}Function.Param(1)</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="126569807226476" type="Player">
                                     <param id="0" name="Instance variable">Ativo</param>
@@ -737,7 +737,7 @@
                                 </event-block>
                                 <event-block sid="470887097390286">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="914902975460728" type="System" />
+                                        <condition id="-22" name="Else" sid="193111635005287" type="System" />
                                         <condition id="1" name="Compare parameter" sid="328035462534012" type="Function">
                                             <param id="0" name="Index">1</param>
                                             <param id="1" name="Comparison">0</param>
@@ -747,6 +747,25 @@
                                     <actions>
                                         <action id="4" name="Set animation" sid="422361885605886" type="PlayerSprite">
                                             <param id="0" name="Animation">&quot;standx&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="963064961388995">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="577331973033706" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="133241301509546" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;empurrando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="684462249233827" type="PlayerSprite">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="838314482830577" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;pushx&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
@@ -790,6 +809,22 @@
                                     <actions>
                                         <action id="4" name="Set animation" sid="859602976263888" type="PlayerSprite">
                                             <param id="0" name="Animation">&quot;standdown&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="268325118171037">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="142691243759082" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="560012482095400" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;empurrando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="179545045904394" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;pushdown&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
@@ -840,6 +875,25 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="175670157748535">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="481291375721444" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="566027185742740" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;empurrando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="816752867695441" type="PlayerSprite">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="958565924766035" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;pushx&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="582712274683374">
@@ -879,6 +933,22 @@
                                     <actions>
                                         <action id="4" name="Set animation" sid="435662408400376" type="PlayerSprite">
                                             <param id="0" name="Animation">&quot;standup&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="847020372036730">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="232136993984652" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="346368029950111" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;empurrando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="385089764163188" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;pushup&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
