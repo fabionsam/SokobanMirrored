@@ -5,11 +5,30 @@
     <events>
         <variable constant="0" name="tower_speed" sid="787723865821793" static="0" type="number">15</variable>
         <variable constant="0" name="bg_speed" sid="428479470678110" static="0" type="number">15</variable>
+        <variable constant="0" name="trocando" sid="158645355362395" static="0" type="number">0</variable>
+        <variable constant="0" name="opcao" sid="533173931313315" static="0" type="number">0</variable>
         <event-block sid="133212101076018">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="189553349943804" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Clear" sid="469699321714418" type="Array" />
+                <action id="2" name="Set at X" sid="454605245242050" type="Array">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">&quot;Iniciar&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="407935917052269" type="Array">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">&quot;Colecionáveis&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="397194347863556" type="Array">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Value">&quot;Conquistas&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="113508350051515" type="Array">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Value">&quot;Selecionar nível&quot;</param>
+                </action>
                 <action id="0" name="Play" sid="333257778439673" type="Som">
                     <param id="0" name="Audio file">intro_jogo</param>
                     <param id="2" name="Loop">1</param>
@@ -32,8 +51,21 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="772998232230883" type="System">
-                    <param id="0" name="Layout">Nivel1</param>
+                <action id="-15" name="Set visible" sid="969302922185481" type="PushStart">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="506711914515634" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="153388937377736" type="Sprite12">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="643130085712912" type="TextMenu">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Call function" sid="579646103499981" type="Function">
+                    <param id="0" name="Name">&quot;TrocarOpcao&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -82,5 +114,277 @@
                 <action behavior="FadeIn" id="0" name="Restart fade" sid="561725201468361" type="PushStart" />
             </actions>
         </event-block>
+        <event-group description="" sid="678101518215781" title="Menu">
+            <sub-events>
+                <event-block sid="426320809666450">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="120137761504954" type="Touch">
+                            <param id="0" name="Object">Sprite12</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="394074982399683" type="Sprite12">
+                            <param id="0" name="Instance variable">direcao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="183431571033936" type="System">
+                            <param id="0" name="First value">opcao</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="617110555309365" type="System">
+                            <param id="0" name="First value">trocando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="851028603188896" type="System">
+                            <param id="0" name="Variable">opcao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="995057555768403" type="Function">
+                            <param id="0" name="Name">&quot;TrocarOpcao&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="761322261764946">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="404729386909281" type="Touch">
+                            <param id="0" name="Object">Sprite12</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="155943792381314" type="Sprite12">
+                            <param id="0" name="Instance variable">direcao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="546754644165233" type="System">
+                            <param id="0" name="First value">opcao</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="962412784082352" type="System">
+                            <param id="0" name="First value">trocando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="883556988206254" type="System">
+                            <param id="0" name="Variable">opcao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="945823278451843" type="Function">
+                            <param id="0" name="Name">&quot;TrocarOpcao&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="822095084363103">
+                    <conditions>
+                        <condition id="0" name="On function" sid="294219166528342" type="Function">
+                            <param id="0" name="Name">&quot;TrocarOpcao&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="266325876867032" type="System">
+                            <param id="0" name="Variable">trocando</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Some" id="1" name="Start fade" sid="503084425721815" type="TextMenu" />
+                        <action id="-16" name="Wait" sid="608381033115396" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="196614227557253" type="TextMenu">
+                            <param id="0" name="Text">Array.At(opcao)</param>
+                        </action>
+                        <action behavior="Aparece" id="0" name="Restart fade" sid="336374167129171" type="TextMenu" />
+                        <action id="-16" name="Wait" sid="704396203059476" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="800383097130333" type="System">
+                            <param id="0" name="Variable">trocando</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="288215559281910">
+                    <conditions>
+                        <condition id="4" name="On key code pressed" sid="512241785621845" type="Keyboard">
+                            <param id="0" name="Keycode">37</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="345638781045827" type="Sprite12">
+                            <param id="0" name="Instance variable">direcao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="235017898170248" type="System">
+                            <param id="0" name="First value">opcao</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="957490487053271" type="System">
+                            <param id="0" name="First value">trocando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="181963538775843" type="System">
+                            <param id="0" name="Variable">opcao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="265344624616549" type="Function">
+                            <param id="0" name="Name">&quot;TrocarOpcao&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="527713868886542">
+                    <conditions>
+                        <condition id="4" name="On key code pressed" sid="284112304516959" type="Keyboard">
+                            <param id="0" name="Keycode">39</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="112340559962635" type="Sprite12">
+                            <param id="0" name="Instance variable">direcao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="576020914295133" type="System">
+                            <param id="0" name="First value">opcao</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="681786840830334" type="System">
+                            <param id="0" name="First value">trocando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="194508092429044" type="System">
+                            <param id="0" name="Variable">opcao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="962954881077638" type="Function">
+                            <param id="0" name="Name">&quot;TrocarOpcao&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="663078669382069">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="169782630782179" type="Touch">
+                            <param id="0" name="Object">TextMenu</param>
+                        </condition>
+                        <condition id="3" name="On key released" sid="226496838930128" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="657151686879990" type="Function">
+                            <param id="0" name="Name">&quot;FuncoesMenu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="406241036228302">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="765045162741042" type="Touch">
+                            <param id="0" name="Object">Sprite14</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="222897255090583">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="645533145764966" type="System">
+                                    <param id="0" name="Value">opcao</param>
+                                    <param id="1" name="Lower bound">1</param>
+                                    <param id="2" name="Upper bound">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="233902830893807" type="Sprite13">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="746507283631531" type="Sprite14">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="844727316462502">
+                    <conditions>
+                        <condition id="0" name="On function" sid="174202644596170" type="Function">
+                            <param id="0" name="Name">&quot;FuncoesMenu&quot;</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="961855316606194" type="TextMenu" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="727151598161328">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="688544611603922" type="System">
+                                    <param id="0" name="First value">opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="423170100112031" type="System">
+                                    <param id="0" name="Layout">Intro2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="620978162495130">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="516626816664816" type="System">
+                                    <param id="0" name="First value">opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="109687637657487" type="Sprite13">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="603060266766036" type="Sprite14">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="268332320062378">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="930280071246529" type="System">
+                                    <param id="0" name="First value">opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="246230253721461" type="Sprite13">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="810110875855622" type="Sprite14">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="676945289141096">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="200971969923762" type="System">
+                                    <param id="0" name="First value">opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

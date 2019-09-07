@@ -165,6 +165,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Sprite20" uid="89">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>24.865257263</x>
+                        <y>44.331039429</y>
+                        <z>0</z>
+                        <width>33.466873169</width>
+                        <height>32.447357178</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -420,7 +442,7 @@
                 </instance>
                 <instance type="Passos" uid="44">
                     <properties>
-                        <text>Passos: 0</text>
+                        <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Roman,-16,400,0</font>
                         <color>255,255,255</color>
@@ -433,10 +455,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>7.863182068</x>
-                        <y>29.987556458</y>
+                        <x>44.745811462</x>
+                        <y>35.451782227</y>
                         <z>0</z>
-                        <width>75.676948547</width>
+                        <width>37.428199768</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -540,11 +562,11 @@
                                 <movement>Size</movement>
                                 <wave>Sine</wave>
                                 <period>2</period>
-                                <period-random>5</period-random>
+                                <period-random>3</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>3</magnitude>
-                                <magnitude-random>5</magnitude-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>1</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -580,11 +602,11 @@
                                 <movement>Size</movement>
                                 <wave>Sine</wave>
                                 <period>2</period>
-                                <period-random>5</period-random>
+                                <period-random>3</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>3</magnitude>
-                                <magnitude-random>5</magnitude-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>1</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -620,11 +642,11 @@
                                 <movement>Size</movement>
                                 <wave>Sine</wave>
                                 <period>2</period>
-                                <period-random>5</period-random>
+                                <period-random>3</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>3</magnitude>
-                                <magnitude-random>5</magnitude-random>
+                                <magnitude>1</magnitude>
+                                <magnitude-random>1</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

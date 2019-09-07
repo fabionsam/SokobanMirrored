@@ -11,11 +11,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">Menu</layout>
-        <layout order="4">Nivel1</layout>
-        <layout order="5">Nivel2</layout>
-        <layout order="6">Nivel3</layout>
+        <layout order="3">Nivel1</layout>
+        <layout order="4">Nivel2</layout>
+        <layout order="5">Nivel3</layout>
+        <layout active="1" order="6">Intro</layout>
+        <layout order="9">Intro2</layout>
         <event-sheet order="2">Menu</event-sheet>
-        <event-sheet active="1" order="3">Nivel</event-sheet>
+        <event-sheet order="7">Intro</event-sheet>
+        <event-sheet order="8">Nivel</event-sheet>
+        <event-sheet order="10">Intro2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -26,13 +30,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Nivel/" />
+        <folder expanded="0" path="object-folder/Nivel/" />
         <folder expanded="1" path="object-folder/Menu/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="layout-folder/Menu/" />
-        <folder expanded="1" path="layout-folder/Nivel/" />
-        <folder expanded="0" path="event-folder/" />
-        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="layout-folder/Nivel/" />
+        <folder expanded="0" path="layout-folder/História/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/História/" />
+        <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
@@ -50,9 +56,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Porta2/" />
         <folder expanded="1" path="animation-folder/Reset/" />
         <folder expanded="1" path="animation-folder/Menu/" />
+        <folder expanded="1" path="animation-folder/Sprite16/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
-        <folder expanded="1" path="animation-folder/Fadein/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
         <folder expanded="1" path="animation-folder/Sprite5/" />
         <folder expanded="1" path="animation-folder/Sprite6/" />
@@ -61,5 +67,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite9/" />
         <folder expanded="1" path="animation-folder/Estrela/" />
         <folder expanded="1" path="animation-folder/Sprite11/" />
+        <folder expanded="1" path="animation-folder/Sprite10/" />
+        <folder expanded="1" path="animation-folder/Fadein/" />
+        <folder expanded="1" path="animation-folder/Sprite12/" />
+        <folder expanded="1" path="animation-folder/Sprite13/" />
+        <folder expanded="1" path="animation-folder/Sprite14/" />
+        <folder expanded="1" path="animation-folder/Sprite15/" />
+        <folder expanded="1" path="animation-folder/Sprite17/" />
+        <folder expanded="1" path="animation-folder/Sprite18/" />
+        <folder expanded="1" path="animation-folder/Sprite19/" />
+        <folder expanded="1" path="animation-folder/Sprite20/" />
     </folders-expanded>
 </c2uistate>

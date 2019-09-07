@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Intro2</name>
+    <events>
+        <variable constant="0" name="page" sid="726467804767097" static="0" type="number">1</variable>
+        <variable constant="0" name="bg_speed2" sid="976356928165270" static="0" type="number">300</variable>
+        <event-block sid="856256993707497">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="893000601209725" type="System" />
+                <condition id="-8" name="Compare two values" sid="254974477968700" type="System">
+                    <param id="0" name="First value">page</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="213360457499680">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="111134752110882" type="Sprite15">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">258</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="734782367455695" type="Sprite15">
+                            <param id="0" name="X">Sprite15.X + bg_speed2 * dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="640479907852521">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="326513607777076" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="729592382840944" type="System">
+                            <param id="0" name="Variable">page</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="942734078488218">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="822902177120198" type="System" />
+                <condition id="-8" name="Compare two values" sid="162521166674748" type="System">
+                    <param id="0" name="First value">page</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="397836620138944">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="556917748993890" type="Sprite17">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">258</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="961840916959362" type="Sprite17">
+                            <param id="0" name="X">Sprite17.X + bg_speed2 * dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="254382419829439">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="290471191220898" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="585511651759285" type="Sprite18">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="499053974033551" type="Sprite15" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="825400663813211" type="Sprite17" />
+                        <action id="-16" name="Wait" sid="605700421327393" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="994497383982010" type="System">
+                            <param id="0" name="Variable">page</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="691015148035308">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="184738479909436" type="System" />
+                <condition id="-8" name="Compare two values" sid="813012423877768" type="System">
+                    <param id="0" name="First value">page</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="671844857478446">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="901616199970891" type="Sprite18">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">258</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="862119461958216" type="Sprite18">
+                            <param id="0" name="X">Sprite18.X + bg_speed2 * dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="652444781433395">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="821389629428521" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="572268619414924" type="Sprite19">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="574837078694032" type="System">
+                            <param id="0" name="Variable">page</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="604549954265116">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="791884135210501" type="System" />
+                <condition id="-8" name="Compare two values" sid="451039795551238" type="System">
+                    <param id="0" name="First value">page</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">4</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="451910666720506">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="116361367639153" type="Sprite19">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">258</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="519372647297802" type="Sprite19">
+                            <param id="0" name="X">Sprite19.X + bg_speed2 * dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="162027930661714">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="574414676900777" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="102471615273882" type="Sprite18" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="235394020553157" type="Sprite19" />
+                        <action id="-16" name="Wait" sid="989863672390243" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="553608174390091" type="System">
+                            <param id="0" name="Layout">Nivel1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="375153039828455">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="956969520124566" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="966981747812601" type="System">
+                    <param id="0" name="Variable">page</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
