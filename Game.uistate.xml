@@ -9,18 +9,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         </active>
         <display name="HTML5" />
     </configurations>
-    <open-tabs>
-        <layout order="1">Menu</layout>
-        <layout order="3">Nivel1</layout>
-        <layout order="4">Nivel2</layout>
-        <layout order="5">Nivel3</layout>
-        <layout active="1" order="6">Intro</layout>
-        <layout order="9">Intro2</layout>
-        <event-sheet order="2">Menu</event-sheet>
-        <event-sheet order="7">Intro</event-sheet>
-        <event-sheet order="8">Nivel</event-sheet>
-        <event-sheet order="10">Intro2</event-sheet>
-    </open-tabs>
+    <open-tabs />
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
@@ -29,13 +18,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1" />
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="object-folder/Nivel/" />
-        <folder expanded="1" path="object-folder/Menu/" />
+        <folder expanded="0" path="object-folder/Menu/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="layout-folder/Menu/" />
+        <folder expanded="0" path="layout-folder/Menu/" />
         <folder expanded="0" path="layout-folder/Nivel/" />
-        <folder expanded="0" path="layout-folder/História/" />
+        <folder expanded="1" path="layout-folder/História/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="event-folder/História/" />
         <folder expanded="0" path="file-folder/" />
