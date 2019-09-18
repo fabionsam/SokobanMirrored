@@ -84,7 +84,7 @@
                         <event-block any="1" sid="935672670720123">
                             <conditions>
                                 <condition id="3" name="On key released" sid="765330897065633" type="Keyboard">
-                                    <param id="0" name="Key">39</param>
+                                    <param id="0" name="Key">39 (Right arrow)</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="539785217919416" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;isTouching&quot;, &quot;right&quot;)</param>
@@ -164,7 +164,7 @@
                         <event-block any="1" sid="690322324045961">
                             <conditions>
                                 <condition id="3" name="On key released" sid="110064070720580" type="Keyboard">
-                                    <param id="0" name="Key">40</param>
+                                    <param id="0" name="Key">40 (Down arrow)</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="495601807223342" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;isTouching&quot;, &quot;down&quot;)</param>
@@ -244,7 +244,7 @@
                         <event-block any="1" sid="342895544906635">
                             <conditions>
                                 <condition id="3" name="On key released" sid="561863432548946" type="Keyboard">
-                                    <param id="0" name="Key">37</param>
+                                    <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="232206732453532" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;isTouching&quot;, &quot;left&quot;)</param>
@@ -324,7 +324,7 @@
                         <event-block any="1" sid="753870179854800">
                             <conditions>
                                 <condition id="3" name="On key released" sid="304187975640250" type="Keyboard">
-                                    <param id="0" name="Key">38</param>
+                                    <param id="0" name="Key">38 (Up arrow)</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="678836599787744" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;isTouching&quot;, &quot;up&quot;)</param>
@@ -1096,7 +1096,7 @@
                                 <condition id="-14" name="Compare variable" sid="918213378921539" type="System">
                                     <param id="0" name="Variable">level</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">6</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1141,7 +1141,7 @@
                             <param id="0" name="Object">Reset</param>
                         </condition>
                         <condition id="3" name="On key released" sid="887157343037505" type="Keyboard">
-                            <param id="0" name="Key">13</param>
+                            <param id="0" name="Key">13 (Return)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1155,7 +1155,7 @@
                             <param id="0" name="Object">Menu</param>
                         </condition>
                         <condition id="3" name="On key released" sid="600038165435444" type="Keyboard">
-                            <param id="0" name="Key">27</param>
+                            <param id="0" name="Key">27 (Esc)</param>
                         </condition>
                     </conditions>
                     <actions>

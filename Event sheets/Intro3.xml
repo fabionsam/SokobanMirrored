@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Intro3</name>
+    <events>
+        <include>Menu</include>
+        <variable constant="0" name="bg_speed3" sid="679294341668252" static="0" type="number">300</variable>
+        <event-block sid="906302524562851">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="875922708494327" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="570660049098616">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="378207920990549" type="Sprite21">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">258</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="423756322545405" type="Sprite21">
+                            <param id="0" name="X">Sprite21.X + bg_speed2 * dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="454256479660615">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="403278432393141" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="732711828706010" type="Sprite21" />
+                        <action id="-16" name="Wait" sid="570023513414049" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-43" name="Go to next/previous layout" sid="656735083057495" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

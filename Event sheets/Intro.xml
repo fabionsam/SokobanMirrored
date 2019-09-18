@@ -30,7 +30,7 @@
         <event-block any="1" sid="639428001670070">
             <conditions>
                 <condition id="3" name="On key released" sid="647657965410666" type="Keyboard">
-                    <param id="0" name="Key">27</param>
+                    <param id="0" name="Key">27 (Esc)</param>
                 </condition>
                 <condition id="15" name="On double-tap" sid="614280316941397" type="Touch" />
             </conditions>

@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Nivel3</name>
-    <sid>813649815584624</sid>
+    <name>Nivel5</name>
+    <sid>422098938828037</sid>
     <event-sheet>Nivel</event-sheet>
     <size>
-        <width>256</width>
+        <width>512</width>
         <height>256</height>
     </size>
     <margins>
-        <horizontal>256</horizontal>
+        <horizontal>512</horizontal>
         <vertical>256</vertical>
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="TileSet" sid="382540246665263">
+        <layer name="TileSet" sid="816329941334090">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Tilemap" uid="91">
+                <instance type="Tilemap" uid="130">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>32</tile-width>
@@ -58,10 +58,10 @@
                         <height>8</height>
                         <max-width>16</max-width>
                         <max-height>16</max-height>
-                        <data>2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,36,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,37,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,37,-1,-1,-1,-1,-1,-1,-1,2,6,12,18,24,30,12,36,37,-1,-1,-1,-1,-1,-1,-1,2,7,13,19,25,25,25,38,37,-1,-1,-1,-1,-1,-1,-1,2,8,14,20,26,26,26,39,37,-1,-1,-1,-1,-1,-1,-1,2,9,15,21,27,27,27,39,37,-1,-1,-1,-1,-1,-1,-1,2,10,16,22,28,28,34,40,40,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1</data>
+                        <data>2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,36,-1,-1,-1,-1,-1,-1,-1,6,12,18,24,24,30,36,2,37,-1,-1,-1,-1,-1,-1,-1,7,13,19,25,25,25,37,2,37,-1,-1,-1,-1,-1,-1,-1,8,14,20,26,26,26,38,2,37,-1,-1,-1,-1,-1,-1,-1,9,15,21,27,27,27,39,2,37,-1,-1,-1,-1,-1,-1,-1,10,16,22,28,28,34,40,2,37,-1,-1,-1,-1,-1,-1,-1,6,12,18,24,24,30,36,2,37,-1,-1,-1,-1,-1,-1,-1,7,13,19,25,25,25,37,2,40,-1,-1,-1,-1,-1,-1,-1,8,14,20,26,26,26,38,2,-1,-1,-1,-1,-1,-1,-1,-1,9,15,21,27,27,27,39,2,-1,-1,-1,-1,-1,-1,-1,-1,10,16,22,28,28,34,40,2,-1,-1,-1,-1,-1,-1,-1,-1,2,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,1073741826,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1,1073741826,2,2,2,2,2,2,2,-1,-1,-1,-1,-1,-1,-1,-1</data>
                     </tilemap-data>
                 </instance>
-                <instance type="Reset" uid="92">
+                <instance type="Reset" uid="131">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -83,7 +83,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu" uid="93">
+                <instance type="Menu" uid="132">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -105,7 +105,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Porta2" uid="94">
+                <instance type="Porta2" uid="133">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -126,8 +126,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240</x>
-                        <y>80</y>
+                        <x>336</x>
+                        <y>48</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -138,9 +138,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Niveln" uid="96">
+                <instance type="Niveln" uid="134">
                     <properties>
-                        <text>Nível 3-1</text>
+                        <text>Nível 5-1</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Rubik,-16,400,0</font>
                         <color>255,255,255</color>
@@ -153,8 +153,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>8.472602844</x>
-                        <y>7.789543152</y>
+                        <x>12</x>
+                        <y>4</y>
                         <z>0</z>
                         <width>72.055923462</width>
                         <height>22.723522186</height>
@@ -165,7 +165,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite20" uid="97">
+                <instance type="Sprite20" uid="135">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -175,8 +175,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>24.865257263</x>
-                        <y>44.331039429</y>
+                        <x>26.77041626</x>
+                        <y>38.373466492</y>
                         <z>0</z>
                         <width>33.466873169</width>
                         <height>32.447357178</height>
@@ -190,7 +190,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Paredes" sid="497039578070593">
+        <layer name="Paredes" sid="312225239212711">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -206,7 +206,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Parede" uid="98">
+                <instance type="Parede" uid="136">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <tile-width>32</tile-width>
@@ -223,7 +223,7 @@
                         <x>0</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>511.645965576</width>
+                        <width>512</width>
                         <height>256</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -231,17 +231,17 @@
                         <opacity>1</opacity>
                     </world>
                     <tilemap-data>
-                        <width>15</width>
+                        <width>16</width>
                         <height>8</height>
                         <max-width>16</max-width>
                         <max-height>8</max-height>
-                        <data>-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,0,0,0,-1,-1,-1,0,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,0,-1,-1,-1,0,0,0,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</data>
+                        <data>-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,0,0,0,-1,-1,-1,0,-1,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,0,-1,-1,-1,0,0,0,0,-1,-1,-1,-1,0,0,0,0,-1,-1,-1,0,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,0,-1,-1,-1,0,0,0,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</data>
                     </tilemap-data>
                 </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Objetos" sid="550945721575692">
+        <layer name="Objetos" sid="937582172091184">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -257,7 +257,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Ativador" uid="99">
+                <instance type="Ativador" uid="137">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -267,8 +267,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>208</x>
-                        <y>208</y>
+                        <x>144</x>
+                        <y>176</y>
                         <z>0</z>
                         <width>24</width>
                         <height>24</height>
@@ -279,7 +279,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="100">
+                <instance type="Player" uid="138">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -309,8 +309,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240</x>
-                        <y>176</y>
+                        <x>176</x>
+                        <y>80</y>
                         <z>0</z>
                         <width>28</width>
                         <height>28</height>
@@ -321,7 +321,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerSprite" uid="101">
+                <instance type="PlayerSprite" uid="139">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -355,7 +355,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Caixa" uid="102">
+                <instance type="Caixa" uid="140">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -381,8 +381,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>208</x>
-                        <y>176</y>
+                        <x>144</x>
+                        <y>144</y>
                         <z>0</z>
                         <width>28</width>
                         <height>28</height>
@@ -393,7 +393,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Box" uid="103">
+                <instance type="Box" uid="141">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -418,18 +418,38 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Destino" uid="104">
+                <instance type="Player" uid="142">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <TempoMovimento>0.5</TempoMovimento>
+                        <Ativo>false</Ativo>
+                        <player>2</player>
+                        <spriteId>0</spriteId>
+                        <direcao>0</direcao>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240</x>
-                        <y>80</y>
+                        <x>336</x>
+                        <y>144</y>
                         <z>0</z>
                         <width>28</width>
                         <height>28</height>
@@ -440,7 +460,29 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Passos" uid="105">
+                <instance type="Destino" uid="144">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>336</x>
+                        <y>48</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>28</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Passos" uid="145">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -455,10 +497,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>44.745811462</x>
-                        <y>35.451782227</y>
+                        <x>46.729019165</x>
+                        <y>29.982666016</y>
                         <z>0</z>
-                        <width>37.428199768</width>
+                        <width>31.724708557</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -470,7 +512,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Porta" sid="325379586312518">
+        <layer name="Porta" sid="750760880365623">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -486,7 +528,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Porta" uid="106">
+                <instance type="Porta" uid="146">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -496,8 +538,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240</x>
-                        <y>80</y>
+                        <x>336</x>
+                        <y>48</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -508,7 +550,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite11" uid="107">
+                <instance type="Sprite11" uid="147">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -533,8 +575,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>255.919250488</x>
-                        <y>128.851654053</y>
+                        <x>266.594665527</x>
+                        <y>98.937194824</y>
                         <z>0</z>
                         <width>104.977050781</width>
                         <height>77.643600464</height>
@@ -545,7 +587,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Estrela" uid="108">
+                <instance type="Estrela" uid="148">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -573,8 +615,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>224.919250488</x>
-                        <y>167.851654053</y>
+                        <x>235.594650269</x>
+                        <y>137.937194824</y>
                         <z>0</z>
                         <width>18.98638916</width>
                         <height>18.552688599</height>
@@ -585,7 +627,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Estrela" uid="109">
+                <instance type="Estrela" uid="149">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -593,7 +635,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Passos>10</Passos>
+                        <Passos>6</Passos>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -613,8 +655,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>244.089569092</x>
-                        <y>163.75378418</y>
+                        <x>254.764968872</x>
+                        <y>133.839324951</y>
                         <z>0</z>
                         <width>20.514862061</width>
                         <height>19.571807861</height>
@@ -625,7 +667,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Estrela" uid="110">
+                <instance type="Estrela" uid="150">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -633,7 +675,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Passos>7</Passos>
+                        <Passos>5</Passos>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -653,8 +695,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>263.706420898</x>
-                        <y>167.851654053</y>
+                        <x>274.381835938</x>
+                        <y>137.937194824</y>
                         <z>0</z>
                         <width>18.98638916</width>
                         <height>18.552688599</height>

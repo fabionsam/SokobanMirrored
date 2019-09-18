@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3pwmtcewzrbco</unique-id>
-    <saved-with-version>26900</saved-with-version>
+    <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
@@ -65,7 +65,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248030740759358" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\crist\Downloads\platô.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\crist\Downloads\plat�.png">
                             <collision-poly>
                                 <point x="0.09375" y="0.09375" />
                                 <point x="0.90625" y="0.09375" />
@@ -903,6 +903,27 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite21" sid="712100288503601">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="340991274050888">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="278378446699896" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\cristhian.dutra\Downloads\Rafael-olhando-no-espelho.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite22" sid="205167823543374">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="392805204254558" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -913,16 +934,21 @@
             <layout>Nivel1.xml</layout>
             <layout>Nivel2.xml</layout>
             <layout>Nivel3.xml</layout>
+            <layout>Nivel4.xml</layout>
+            <layout>Nivel5.xml</layout>
+            <layout>Nivel6.xml</layout>
         </layout-folder>
-        <layout-folder name="História">
+        <layout-folder name="Historia">
             <layout>Intro.xml</layout>
             <layout>Intro2.xml</layout>
+            <layout>Intro3.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
-        <event-folder name="História">
+        <event-folder name="Historia">
             <event-sheet>Intro.xml</event-sheet>
             <event-sheet>Intro2.xml</event-sheet>
+            <event-sheet>Intro3.xml</event-sheet>
         </event-folder>
         <event-sheet>Nivel.xml</event-sheet>
         <event-sheet>Menu.xml</event-sheet>
