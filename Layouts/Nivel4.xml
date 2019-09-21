@@ -231,7 +231,7 @@
                         <opacity>1</opacity>
                     </world>
                     <tilemap-data>
-                        <width>15</width>
+                        <width>16</width>
                         <height>8</height>
                         <max-width>16</max-width>
                         <max-height>8</max-height>
@@ -580,8 +580,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>239.842010498</x>
-                        <y>161.044555664</y>
+                        <x>242.842010498</x>
+                        <y>120.044555664</y>
                         <z>0</z>
                         <width>104.977050781</width>
                         <height>77.643600464</height>
@@ -620,8 +620,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>208.842010498</x>
-                        <y>200.044555664</y>
+                        <x>211.842010498</x>
+                        <y>159.044555664</y>
                         <z>0</z>
                         <width>18.98638916</width>
                         <height>18.552688599</height>
@@ -660,8 +660,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>228.012329102</x>
-                        <y>195.946685791</y>
+                        <x>231.012329102</x>
+                        <y>154.946685791</y>
                         <z>0</z>
                         <width>20.514862061</width>
                         <height>19.571807861</height>
@@ -700,8 +700,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>247.629180908</x>
-                        <y>200.044555664</y>
+                        <x>250.629180908</x>
+                        <y>159.044555664</y>
                         <z>0</z>
                         <width>18.98638916</width>
                         <height>18.552688599</height>

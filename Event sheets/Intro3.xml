@@ -33,12 +33,20 @@
                         <action id="-16" name="Wait" sid="570023513414049" type="System">
                             <param id="0" name="Seconds">5</param>
                         </action>
-                        <action id="-43" name="Go to next/previous layout" sid="656735083057495" type="System">
-                            <param id="0" name="Which">0</param>
+                        <action id="-2" name="Go to layout" sid="957571023053173" type="System">
+                            <param id="0" name="Layout">Nivel5</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="129311570533032">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="183332612937850" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="631309397634418" type="Som" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

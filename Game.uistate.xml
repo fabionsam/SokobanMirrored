@@ -10,17 +10,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Intro</layout>
-        <layout order="1">Intro2</layout>
-        <layout order="3">Intro3</layout>
-        <layout order="7">Nivel3</layout>
-        <layout order="8">Nivel4</layout>
-        <layout order="9">Nivel5</layout>
-        <layout order="10">Nivel6</layout>
-        <layout order="5">Nivel1</layout>
-        <layout order="6">Nivel2</layout>
-        <event-sheet order="2">Intro3</event-sheet>
+        <layout order="1">Creditos</layout>
+        <layout order="2">Intro3</layout>
+        <layout order="3">Nivel1</layout>
+        <layout order="7">Nivel4</layout>
+        <layout order="8">Nivel5</layout>
+        <layout order="9">Nivel6</layout>
+        <layout order="10">Nivel3</layout>
+        <layout order="12">Intro</layout>
         <event-sheet order="4">Nivel</event-sheet>
+        <event-sheet order="5">Intro3</event-sheet>
+        <event-sheet order="6">Creditos</event-sheet>
+        <event-sheet active="1" order="11">Intro</event-sheet>
+        <event-sheet order="13">Intro2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -40,8 +42,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="event-folder/Historia/" />
         <folder expanded="0" path="file-folder/" />
-        <folder expanded="0" path="sound-folder/" />
-        <folder expanded="0" path="music-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Ativador/" />
         <folder expanded="1" path="animation-folder/Box/" />
@@ -80,5 +82,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite20/" />
         <folder expanded="1" path="animation-folder/Sprite21/" />
         <folder expanded="1" path="animation-folder/Sprite22/" />
+        <folder expanded="1" path="animation-folder/Sprite23/" />
+        <folder expanded="1" path="animation-folder/Sprite24/" />
     </folders-expanded>
 </c2uistate>

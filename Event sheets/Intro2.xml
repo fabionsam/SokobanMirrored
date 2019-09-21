@@ -177,6 +177,7 @@
                     <param id="0" name="Variable">page</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="33" name="Stop all" sid="906101703366440" type="Som" />
             </actions>
         </event-block>
     </events>

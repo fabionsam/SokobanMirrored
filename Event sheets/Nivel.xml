@@ -3,10 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Nivel</name>
     <events>
+        <variable constant="0" name="trocouNivel" sid="362617711786803" static="0" type="number">0</variable>
         <variable constant="0" name="contPassos" sid="784216756167904" static="0" type="number">0</variable>
         <variable constant="0" name="level" sid="799340816221556" static="0" type="number">1</variable>
+        <variable constant="0" name="totalEstrelas" sid="738514117238438" static="0" type="number">0</variable>
         <variable constant="0" name="controleAtivos" sid="261642454474046" static="0" type="text">false</variable>
         <variable constant="0" name="movimentoCompleto" sid="446911832249717" static="0" type="text">false</variable>
+        <variable constant="0" name="tocandoMusica" sid="455955431349581" static="0" type="number">0</variable>
         <variable constant="0" name="direita" sid="617121110180437" static="0" type="number">0</variable>
         <variable constant="0" name="baixo" sid="780408708270037" static="0" type="number">90</variable>
         <variable constant="0" name="esquerda" sid="615982847496869" static="0" type="number">180</variable>
@@ -17,9 +20,7 @@
                 <condition id="-2" name="On start of layout" sid="708867902099272" type="System" />
             </conditions>
             <actions>
-                <action id="6" name="Stop" sid="373859223179215" type="Som">
-                    <param id="0" name="Tag">&quot;intro&quot;</param>
-                </action>
+                <action id="33" name="Stop all" sid="602882502208259" type="Som" />
                 <action id="-4" name="Set position to another object" sid="146112901032066" type="Box">
                     <param id="0" name="Object">Caixa</param>
                     <param id="1" name="Image point (optional)">0</param>
@@ -34,6 +35,20 @@
                 </action>
                 <action id="-9" name="Set value" sid="365916896245723" type="System">
                     <param id="0" name="Variable">contPassos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="367268171885787" type="Som">
+                    <param id="0" name="Audio file">stagesss</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;stage&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="410972626382806" type="System">
+                    <param id="0" name="Variable">tocandoMusica</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="422038521042626" type="System">
+                    <param id="0" name="Variable">trocouNivel</param>
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
@@ -1065,8 +1080,20 @@
                         <condition id="1" name="Is overlapping another object" sid="214393199345337" type="Player">
                             <param id="0" name="Object">Destino</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="501723230828230" type="System">
+                            <param id="0" name="Variable">trocouNivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="188330068774314" type="System">
+                            <param id="0" name="Variable">trocouNivel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="200790717029392" type="Som">
+                            <param id="0" name="Tag">&quot;stage&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="255696693800967" type="System">
                             <param id="0" name="Variable">controleAtivos</param>
                             <param id="1" name="Value">&quot;false&quot;</param>
@@ -1091,8 +1118,27 @@
                         <action id="-9" name="Destroy" sid="405481418890490" type="Player" />
                     </actions>
                     <sub-events>
+                        <event-block sid="596366128864768">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="677854726242491" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="535526520842993" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Value">level+1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="257077426516431" type="System">
+                                    <param id="0" name="Layout">Intro3</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="636330880064376">
                             <conditions>
+                                <condition id="-22" name="Else" sid="840102807932847" type="System" />
                                 <condition id="-14" name="Compare variable" sid="918213378921539" type="System">
                                     <param id="0" name="Variable">level</param>
                                     <param id="1" name="Comparison">5</param>
@@ -1100,15 +1146,12 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="604764266051388" type="System">
-                                    <param id="0" name="Layout">Menu</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="208364087968038" type="System">
                                     <param id="0" name="Variable">level</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="875563160962107" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
+                                <action id="-2" name="Go to layout" sid="604764266051388" type="System">
+                                    <param id="0" name="Layout">Creditos</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1123,9 +1166,6 @@
                                 </action>
                                 <action id="-43" name="Go to next/previous layout" sid="961575927078902" type="System">
                                     <param id="0" name="Which">0</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="131699934433395" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1175,6 +1215,27 @@
             </conditions>
             <actions />
             <sub-events>
+                <event-block sid="388030198193989">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="520204835851193" type="System">
+                            <param id="0" name="Variable">tocandoMusica</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="536349139484820" type="System">
+                            <param id="0" name="Variable">tocandoMusica</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="245121317131404" type="Som">
+                            <param id="0" name="Audio file">Vitória</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;vitoria&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="120685556454704">
                     <conditions>
                         <condition id="-24" name="For Each (ordered)" sid="467333292942586" type="System">
@@ -1187,6 +1248,7 @@
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">Function.Param(0)</param>
                         </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="967528669541152" type="Estrela" />
                     </conditions>
                     <actions>
                         <action id="-15" name="Set visible" sid="846124120204202" type="Estrela">
@@ -1194,6 +1256,10 @@
                         </action>
                         <action behavior="Sine" id="0" name="Set active" sid="880431416204837" type="Estrela">
                             <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="939803657913524" type="System">
+                            <param id="0" name="Variable">totalEstrelas</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>

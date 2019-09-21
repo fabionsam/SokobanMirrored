@@ -924,6 +924,37 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite23" sid="195126970188757">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="363041713520124" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503546" original-source="D:\Downloads\credits-pixel.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="477350818220649">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text3" sid="479715251368565">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite24" sid="271660589372205">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="971173735368118" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text4" sid="771086292502542">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text5" sid="611404448032832">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text6" sid="618056330627713">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -942,6 +973,7 @@
             <layout>Intro.xml</layout>
             <layout>Intro2.xml</layout>
             <layout>Intro3.xml</layout>
+            <layout>Creditos.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -949,6 +981,7 @@
             <event-sheet>Intro.xml</event-sheet>
             <event-sheet>Intro2.xml</event-sheet>
             <event-sheet>Intro3.xml</event-sheet>
+            <event-sheet>Creditos.xml</event-sheet>
         </event-folder>
         <event-sheet>Nivel.xml</event-sheet>
         <event-sheet>Menu.xml</event-sheet>
@@ -980,9 +1013,15 @@
     <sounds-folder>
         <file name="caixa.ogg" />
         <file name="door.ogg" />
+        <file name="storm.ogg" />
+        <file name="thunder.ogg" />
+        <file name="thunder2.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="intro_jogo.ogg" />
+        <file name="stagesss.ogg" />
+        <file name="Credits.ogg" />
+        <file name="Vitória.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
