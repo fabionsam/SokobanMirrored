@@ -1229,7 +1229,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Play" sid="245121317131404" type="Som">
-                            <param id="0" name="Audio file">Vitória</param>
+                            <param id="0" name="Audio file">Vitoria</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;vitoria&quot;</param>
